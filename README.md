@@ -8,5 +8,5 @@ Liste d'ami < NomDeVotreBot < Murmurer < "help" pour afficher la liste de comman
 -epicgames-client : npm i epicgames-client
 
 # Réseaux :
-Discord : @SonMaxime#9355
-Twitter : SonMaximeNews
+Discord : @SonMaxime.#9355
+Twitter : @CalisDeTabernak
