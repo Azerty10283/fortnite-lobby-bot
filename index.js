@@ -55,8 +55,8 @@ for (var i = 0; i < 1e7; i++) {
 
 
       fortnite.communicator.on('party:member:joined', async (member) => {
-        console.log(`Member#${member.id} joined!`);
-        console.log(`Members count: ${fortnite.party.members.length}`);
+        console.log(`#${member.id} a rejoint.`);
+        console.log(`Nombre de membres : ${fortnite.party.members.length}`);
 
           fortnite.party.me.setOutfit("/Game/Athena/Items/Cosmetics/Characters/" + CID + "." + CID);
 
