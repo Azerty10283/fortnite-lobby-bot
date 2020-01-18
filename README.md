@@ -9,6 +9,7 @@ Bien changer de NetCL après chaque mises à jour (config.json)
  • Node.js : https://nodejs.org/en/
  • fortnite-epicgames-client : npm i fortnite-epicgames-client
  • epicgames-client : npm i epicgames-client
+ • Liste des objets : https://docs.google.com/spreadsheets/d/1gVDgnzNyMCafIWa-dBO3mgNUHmHzgA9O5sWbfQy2Yfg/edit?usp=drivesdk
 
 # Réseaux :
 Discord : @SonMaxime.#9355
