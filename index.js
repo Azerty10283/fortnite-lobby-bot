@@ -82,7 +82,7 @@ for (var i = 0; i < 1e7; i++) {
           sleep(200);
           eg.acceptFriendRequest(friendops.friend.id)
         }else {
-          eg.communicator.sendMessage(friendops.friend.id, "Sorry, this bot is currently set to not accept friend requests.");
+          eg.communicator.sendMessage(friendops.friend.id, "Désolé, le bot n'accepte pas les demandes d'ami");
           sleep(200);
           eg.declineFriendRequest(friendops.friend.id)
         }
@@ -91,7 +91,7 @@ for (var i = 0; i < 1e7; i++) {
       eg.communicator.on('friend:message', async (data) => {
 
         if(data.message == 'help'){
-              eg.communicator.sendMessage(data.friend.id, 'Commands: CID_ , EID_ , BID_ , !banner, !stop, !bp, !status, !ready, !unready, !input, !platform');
+              eg.communicator.sendMessage(data.friend.id, 'Commands: CID_ , EID_ , BID_ , .banner, .stop, .bp, .status, .ready, .unready');
 }
 
         var args = data.message.split(" ");
@@ -135,13 +135,13 @@ for (var i = 0; i < 1e7; i++) {
           }
         }
 
-        if (args[0].toLowerCase() == "!status"){
+        if (args[0].toLowerCase() == ".status"){
             var mess = data.message.replace("!status", "");
             fortnite.communicator.updateStatus(mess);
             communicator.sendMessage(data.friend.id, 'Status set to ' + mess + "!");
     }
 
-    if (args[0].toLowerCase() == "!update"){
+    if (args[0].toLowerCase() == ".update"){
       fortnite.party.me.setOutfit("/Game/Athena/Items/Cosmetics/Characters/" + config.cid + "." + config.cid);
 
       fortnite.party.me.setBackpack("/Game/Athena/Items/Cosmetics/Backpacks/" + config.bid + "." + config.bid);
@@ -151,70 +151,51 @@ for (var i = 0; i < 1e7; i++) {
       fortnite.party.me.setEmote("/Game/Athena/Items/Cosmetics/Dances/" + config.eid + "." + config.eid);
     }
 
-        if(args[0].toLowerCase() == "!banner"){
+        if(args[0].toLowerCase() == ".banner"){
           try {
             fortnite.party.me.setBanner(100, args[1], args[2]);
             eg.communicator.sendMessage(data.friend.id, "Bannière mis à " + args[1] + " " + args[2]);
           } catch {
-            eg.communicator.sendMessage(data.friend.id, "Utilisez !banner couleur de la bannière");
+            eg.communicator.sendMessage(data.friend.id, "Utilisez .banner couleur de la bannière");
           }
         }
 
-        if(args[0].toLowerCase() == "!ready"){
+        if(args[0].toLowerCase() == ".ready"){
           try {
             fortnite.party.me.setReady(true);
             eg.communicator.sendMessage(data.friend.id, "Prêt!");
           } catch {
-            eg.communicator.sendMessage(data.friend.id, "Please use !ready");
+            eg.communicator.sendMessage(data.friend.id, "Please use .ready");
           }
         }
 
-        if(args[0].toLowerCase() == "!unready"){
+        if(args[0].toLowerCase() == ".unready"){
           try {
             fortnite.party.me.setReady(false);
             eg.communicator.sendMessage(data.friend.id, "Unprêt!");
           } catch {
-            eg.communicator.sendMessage(data.friend.id, "Utilisez !unready");
+            eg.communicator.sendMessage(data.friend.id, "Utilisez .unready");
           }
         }
 
-        if(args[0].toLowerCase() == "!bp"){
+        if(args[0].toLowerCase() == ".bp"){
           try {
             fortnite.party.me.setBattlePass(true, args[1], args[2], args[3]);
             eg.communicator.sendMessage(data.friend.id, "BP mis à " + args[1] + " " + args[2] + " " + args[3] + "!");
           } catch {
-            eg.communicator.sendMessage(data.friend.id, "Utilisez !bp LEVEL XPPERSO FRIENDXP");
+            eg.communicator.sendMessage(data.friend.id, "Utilisez .bp LEVEL XPPERSO FRIENDXP");
           }
         }
 
-        if(args[0].toLowerCase() == "!stop"){
+        if(args[0].toLowerCase() == ".stop"){
           try {
             fortnite.party.me.clearEmote();
             eg.communicator.sendMessage(data.friend.id, "Emote stopé !");
           } catch {
-            eg.communicator.sendMessage(data.friend.id, "Utilisez !stop");
+            eg.communicator.sendMessage(data.friend.id, "Utilisez .stop");
           }
         }
-
-        if(args[0].toLowerCase() == "!platform"){
-          try {
-            fortnite.party.me.setPlatform(args[1]);
-            eg.communicator.sendMessage(data.friend.id, "Définir la plateforme sur " + args[1] + " !");
-          } catch {
-            eg.communicator.sendMessage(data.friend.id, "Utilisez !platform PLATFORME");
-          }
-        }
-
-        if(args[0].toLowerCase() == "!input"){
-          try {
-            fortnite.party.me.setInputType(args[1]);
-            eg.communicator.sendMessage(data.friend.id, "Définir l'entrée sur " + args[1] + " !");
-          } catch {
-            eg.communicator.sendMessage(data.friend.id, "Utilisez !input INPUTTYPE");
-          }
-        }
-
   });
 
-      fortnite.communicator.updateStatus('dev !autoRun | Créé par @SonMaxime#9355');
+      fortnite.communicator.updateStatus('| Créé par @SonMaxime#9355 |');
     });
