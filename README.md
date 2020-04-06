@@ -13,4 +13,4 @@ Bien changer de NetCL après chaque mises à jour (config.json)
 
 # Réseaux :
 Discord : @SonMaxime.#9355
-Twitter : @CalisDeTabernak
+Twitter : @DaisySkywalkerr
